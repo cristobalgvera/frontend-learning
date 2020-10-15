@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+        // MODELO
+        var superl = { titulo: "Superlópez", director: "Javier Ruiz Caldera", estreno: "2018" };
+        var et = { titulo: "E.T.", director: "Steven Spielberg", estreno: 1982 };
+        var interestellar = { titulo: "Interstellar", director: "Christopher Nolan", estreno: "2014" };
+
+        // VISTA
+        function showView(peli) {
+            return `
+            La película <b> ${peli.titulo}</b>, estrenada 
+            en el año <b> ${peli.estreno}</b>, fue
+            dirigida por <b> ${peli.director}</b>!`
+        }
+
+        // CONTROLADORES 
+        function superlContr() { document.getElementById("p").innerHTML = showView(superl); };
+        function etContr() { document.getElementById("p").innerHTML = showView(et); };
+        const interestellarController = () => { document.getElementById("p").innerHTML = showView(interestellar); } 
+    </script>
+</head>
+
+<body>
+    <h1> Mis películas </h1>
+    <button onclick="superlContr()">Superlópez</button>
+    <button onclick="etContr()">E.T.</button>
+    <button onclick="interestellarController()">Interestellar</button>
+    <div id="p"></div>
+</body>
+
+</html>
