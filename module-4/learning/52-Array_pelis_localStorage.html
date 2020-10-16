@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+        // Contenedor 'c' de localStorage
+        const inicial = JSON.stringify(["Superlópez", "Jurassic Park", "Interstellar"]);
+        localStorage.setItem('c', localStorage.getItem('c') || inicial);
+        const storePeliculas = () => { localStorage.setItem('c', localStorage.getItem('c') || inicial); }
+
+        // MODELO
+        let peliculas = JSON.parse(localStorage.getItem('c'));
+        const setPeliculas = () => { peliculas = JSON.parse(localStorage.getItem('c')) };
+
+        // VISTAS
+        function showView() {
+            let i = 0, view = "";
+
+            while (i < peliculas.length) {
+                view += `
+                  <li> ${peliculas[i++]}</li>`;
+            };
+
+            return view;
+        };
+
+        // CONTROLADORES
+        function showContr() {
+            document.getElementById('lista').innerHTML = showView()
+        };
+
+        function addContr() {
+            let p = document.getElementById('pelicula').value;
+            peliculas.push(p);
+            localStorage.setItem('c', JSON.stringify(peliculas));
+            showContr();
+        };
+
+        const resetController = () => {
+            localStorage.removeItem('c');
+            storePeliculas();
+            setPeliculas();
+            showContr();
+        }
+
+        // Eventos
+        document.addEventListener('click', ev => {
+            if (ev.target.matches('#add')) addContr();
+            else if (ev.target.matches('#reset')) resetController();
+        })
+
+        document.addEventListener('DOMContentLoaded', showContr);
+    </script>
+</head>
+
+<body>
+
+    <h1>Películas</h1>
+    Mis películas favoritas:
+    <ul id="lista"> </ul>
+
+    Añadir película:
+    <input type="text" id="pelicula">
+    <button id="add">Añadir</button>
+    <br />
+    <button id="reset">Resetear</button>
+</body>
+
+</html>
