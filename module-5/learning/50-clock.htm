@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html><head><title>Reloj</title>
+            <meta charset="UTF-8">
+
+<script type="text/javascript">
+
+  const mostrar_fecha = ( ) => 
+    document
+    .getElementById("fecha")
+    .innerHTML = new Date( );  
+
+  document.addEventListener(
+    'DOMContentLoaded', 
+    () => {
+      setInterval(mostrar_fecha, 1000); 
+      mostrar_fecha();
+    }
+  )
+</script>
+</head>
+<body>
+
+  <h2>Reloj</h2>
+
+  <div id="fecha"><div>
+</body>
+</html>
+
