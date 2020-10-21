@@ -32,3 +32,19 @@ html {
 	font-family: monospace;
 	cursor: pointer;
 }
+
+.counters {
+	list-style-type: none;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	color: #333;
+	border: 2.5px solid #333;
+	border-radius: 10%;
+	width: min-content;
+	padding: 20px;
+}
+
+.counters li {
+	padding: 0 15px;
+}
