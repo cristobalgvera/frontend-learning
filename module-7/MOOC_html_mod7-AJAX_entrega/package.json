@@ -8,5 +8,8 @@
         "serverUrl": "https://autocorector.dit.upm.es/",
         "courseId": "1",
         "assignmentId": "4"
+    },
+    "devDependencies": {
+        "moocauto": "0.0.7"
     }
 }
