@@ -16,13 +16,8 @@ header nav ul li {
   margin-left: 1rem;
 }
 header nav ul li:hover {
-<<<<<<< HEAD
-  color: #48145f;
-  background-color: #b25a3e;
-=======
-  color: #e75fb4;
-  background-color: #b531d4;
->>>>>>> 6d4da8eefdfb7c9020c65c63dac93e44f6c11765
+  color: #19ddb7;
+  background-color: #488d10;
 }
 header nav ul li a {
   color: inherit;
