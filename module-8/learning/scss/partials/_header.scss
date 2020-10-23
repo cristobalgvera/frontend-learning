@@ -1,0 +1,34 @@
+@use 'mixins';
+@use 'functions';
+@use 'variables';
+
+header {
+    padding: variables.$base;
+    display: flex;
+    justify-content: flex-end;
+
+    nav {
+        margin: variables.$base;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            li {
+                margin-left: variables.$base * 2;
+
+                &:hover {
+                    // background-color: random;
+                    // color: random;
+                    @include mixins.colorChange(functions.randomColor(), functions.randomColor());
+                }
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

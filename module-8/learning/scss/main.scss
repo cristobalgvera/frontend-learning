@@ -1,0 +1,15 @@
+@use 'partials/variables' as *;
+@import 'partials/header';
+
+* {
+    border: 1px solid tomato;
+}
+
+html,
+body {
+    color: $primaryColor;
+    font-size: $base * 2;
+    line-height: $base * 2;
+    margin: 0;
+    font-family: $bodyFont;
+}
