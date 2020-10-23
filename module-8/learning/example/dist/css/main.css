@@ -16,8 +16,8 @@ header nav ul li {
   margin-left: 1rem;
 }
 header nav ul li:hover {
-  color: #a0912f;
-  background-color: #f47909;
+  color: #4cad8b;
+  background-color: #21f46e;
 }
 header nav ul li a {
   color: inherit;
@@ -29,7 +29,8 @@ header nav ul li a {
 
 html,
 body {
-  color: #333;
+  background-color: black;
+  color: white;
   font-size: 1rem;
   line-height: 1rem;
   margin: 0;

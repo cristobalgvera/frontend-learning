@@ -1,0 +1,108 @@
+$module: 8px;
+$colorBase: #333;
+$colorCorporate: rgb(191, 30, 132);
+
+$bp01: 1100px;
+$bp02: 670px;
+
+
+* {
+    // border: 1px solid tomato;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: $module * 2;
+    line-height: $module * 3;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: $module * 3 repeat(4, 1fr) $module * 3;
+    grid-column-gap: $module * 3;
+
+    @media screen and (max-width: $bp02) {
+        grid-template-columns: $module * 2 repeat(4, 1fr) $module * 2;
+        grid-column-gap: $module * 2;
+    }
+}
+
+header {
+    grid-area: 1 / 1 / span 1 / -1;
+    padding: $module * 2 $module * 6;
+    margin-bottom: $module * 2;
+    border-bottom: 2px solid $colorCorporate;
+    font-weight: bold;
+
+    @media screen and (max-width: $bp02) {
+        padding: $module * 2 $module * 4;
+        border-bottom: 0;
+        margin-bottom: 0;
+        background-color: $colorCorporate;
+        color: white;
+    }
+}
+
+aside {
+    grid-area: 2 / 2 / span 1 / span 2;
+    height: $module * 50;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+    }
+
+    @media screen and (max-width: $bp02) {
+        grid-area: 2 / 1 / span 1 / -1;
+        height: $module * 35;
+        margin-bottom: $module * 4;
+    }
+}
+
+main {
+    grid-area: 2 / 4 / span 1 / span 2;
+    display: flex;
+    align-items: baseline;
+
+
+    .title {
+        flex-basis: 50%;
+        flex-shrink: 1;
+        margin: 0 $module * 3 0 0;
+        font-size: $module * 3.5;
+        line-height: $module * 4;
+        color: $colorCorporate;
+    }
+
+    .content {
+        flex-basis: 50%;
+        flex-shrink: 1;
+    }
+
+    @media screen and (max-width: $bp01) {
+        flex-direction: column;
+
+        .title {
+            flex-basis: auto;
+            margin-bottom: $module * 3;
+        }
+
+        .content {
+            flex-basis: auto;
+        }
+    }
+
+    @media screen and (max-width: $bp02) {
+        grid-area: 3 / 2 / span 1 / -2;
+
+        .title {
+            width: 75%
+        }
+    }
+}
