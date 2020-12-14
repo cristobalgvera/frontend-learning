@@ -1,0 +1,31 @@
+/*
+    Block elements overlap margin property, so,
+    if margin 20px, like below, is set, if two
+    block elements are one next another, they will
+    had just 20px of top and bottom margin, no 40px
+    as expected (20px + 20px = 40px)
+*/
+
+div {
+    border: 2px solid crimson;
+    margin: 20px;
+    padding: 20px;
+}
+
+/*
+    As block elements overlap margin, inline ones overlap
+    padding in the same way. So, if two of them are next to
+    each one, they will had, following below example, just
+    20px of top and bottom padding, no 40px as expected (20px
+    + 20px = 40px)
+ */
+
+span {
+    /*
+        Inline-block elements helps us to set work of properties
+        as expected
+    */
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+}
