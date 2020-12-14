@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+
+<h1>HTML Forms</h1>
+
+<form>
+    <label>
+        Username: <input type="text" id="username" name="username" placeholder="Your username" required>
+    </label>
+
+    <br/>
+
+    <label>
+        Email: <input type="email" id="email" name="email" placeholder="Your email" required>
+    </label>
+
+    <br/>
+    <br/>
+
+    <label>
+        Password: <input type="password" id="password" name="password" placeholder="Your password" required>
+    </label>
+
+    <br/>
+    <br/>
+
+    <label>
+        Select your age:
+        <br/>
+        <label>
+            <input type="radio" name="age" value="0-25" id="option-1" checked>
+            0 - 25
+        </label>
+        <label>
+            <input type="radio" name="age" value="26-50" id="option-2">
+            26 - 50
+        </label>
+        <label>
+            <input type="radio" name="age" value="51+" id="option-3">
+            51 +
+        </label>
+    </label>
+
+    <br/>
+    <br/>
+
+    <label>
+        Security question:
+        <select name="question" id="question">
+            <option value="q-1">What color are your favorite pair of socks?</option>
+            <option value="q-2">If you could be a vegetable, what it be?</option>
+            <option value="q-3">What is your best security question?</option>
+        </select>
+    </label>
+
+    <br/>
+    <br/>
+
+    <label>
+        Security question answer: <input type="text" id="answer" name="answer">
+    </label>
+
+    <br/>
+    <br/>
+
+    <label>
+        Tell us about you:
+        <br/>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Enter you bio..."></textarea>
+    </label>
+
+    <br/>
+    <br/>
+
+    <button type="submit">Submit the form</button>
+</form>
+
+</body>
+</html>
