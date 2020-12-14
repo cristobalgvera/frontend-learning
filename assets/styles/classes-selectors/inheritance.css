@@ -1,0 +1,39 @@
+.inheritance {
+    color: lightcoral;
+    border: 1px solid grey;
+    margin: 40px;
+    font-weight: bold;
+}
+
+.inheritance p {
+    border: inherit;
+    margin: inherit;
+    /* You still can override inheritance */
+    color: crimson;
+}
+
+/*
+    However, CSS files are read from up to bottom, so,
+    in this case (there are rules associated to CSS
+    priority), because '.inheritance p' ruleset has
+    same priority in below and above examples, most
+    bottom one, that means, below one, will be the final
+    value for color property of paragraph tags inside
+    '.inheritance' class.
+*/
+
+.inheritance p {
+    color: orange;
+}
+
+/*
+    Rather than the last example, below case has minor
+    priority, so, it won't override above property.
+    There are kinda formula to define priority.
+
+    More about: https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade
+ */
+
+p {
+    color: blue;
+}

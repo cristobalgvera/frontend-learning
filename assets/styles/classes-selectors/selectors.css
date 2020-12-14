@@ -1,0 +1,44 @@
+/* Select all anchor tag that are using href property */
+
+a[href] {
+    background-color: lightgreen;
+}
+
+/*
+    Select all anchor tag that are using href property
+    with specific value on it, this case: 'https://www.google.com/'
+*/
+
+a[href='https://www.google.com/'] {
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*
+    Select all anchor tag that are using href property
+    with a value on it, this case: 'elements-levels'
+*/
+
+a[href*='elements-levels'] {
+    color: white;
+    background-color: red;
+    text-decoration: line-through;
+    font-weight: lighter;
+    text-transform: lowercase;
+}
+
+/*
+    Select all anchor tag that are using href property
+    with an specific ending value on it, this case:
+    'index.html'
+*/
+
+a[href$='index.html'] {
+    color: white;
+    background-color: violet;
+    border: 2px solid orange;
+    padding: 2px;
+}

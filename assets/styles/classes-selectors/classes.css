@@ -1,0 +1,30 @@
+p.red {
+    color: red;
+}
+
+p.success {
+    color: green;
+}
+
+p.success.feedback {
+    border: 1px dashed green;
+}
+
+p.red.text-center {
+    text-align: center;
+}
+
+.content {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.content p {
+    margin: 100px auto;
+}
+
+/* This will be applied when cursor is over tag */
+
+div .red:hover {
+    background-color: lightblue;
+}
