@@ -1,7 +1,0 @@
-@mixin colorChange($color, $backgroundColor: '') {
-    color: $color;
-
-    @if $backgroundColor != '' {
-        background-color: $backgroundColor;
-    }
-}

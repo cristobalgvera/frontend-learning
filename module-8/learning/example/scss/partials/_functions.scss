@@ -1,8 +1,0 @@
-@use 'sass:math';
-
-@function randomColor() {
-    $red: 255 * math.random();
-    $green: 255 * math.random();
-    $blue: 255 * math.random();
-    @return rgb($red, $green, $blue);
-}
